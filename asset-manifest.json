@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.500c28f2.css",
-    "main.js": "/static/js/main.b7a41701.js",
-    "index.html": "/index.html",
-    "main.500c28f2.css.map": "/static/css/main.500c28f2.css.map",
-    "main.b7a41701.js.map": "/static/js/main.b7a41701.js.map"
+    "main.css": "/testTaskAleannLabFrontend/static/css/main.500c28f2.css",
+    "main.js": "/testTaskAleannLabFrontend/static/js/main.b7a41701.js",
+    "index.html": "/testTaskAleannLabFrontend/index.html",
+    "main.500c28f2.css.map": "/testTaskAleannLabFrontend/static/css/main.500c28f2.css.map",
+    "main.b7a41701.js.map": "/testTaskAleannLabFrontend/static/js/main.b7a41701.js.map"
   },
   "entrypoints": [
     "static/css/main.500c28f2.css",

@@ -44,46 +44,44 @@ const UsersList = ({ users, edit, remove }) => {
                 e.preventDefault();
             }}
         >
-            {users
-                .sort((a, b) => a.rank - b.rank)
-                .map(({ name, rank, _id }) => (
-                    <li
-                        key={_id}
-                        draggable={true}
-                        className={s.item}
-                        onDragStart={e => handleDragStart(e, rank)}
-                        onDragEnter={e => handleDragEnter(e, rank)}
-                        onDragEnd={handleDragEnd}
-                    >
-                        {editId === _id ? (
-                            <EditForm
-                                rank={rank}
-                                name={name}
-                                cancel={cancel}
-                                submit={submit}
-                            />
-                        ) : (
-                            <>
-                                <div className={s.user}>
-                                    <span>{rank}: </span>
-                                    <span>{name}</span>
-                                </div>
-                                <div className={s.buttons}>
-                                    <RiEditLine
-                                        className={s.button}
-                                        size="25"
-                                        onClick={() => onEdit(_id)}
-                                    />
-                                    <RiDeleteBin5Line
-                                        className={s.button}
-                                        size="25"
-                                        onClick={() => remove(_id)}
-                                    />
-                                </div>
-                            </>
-                        )}
-                    </li>
-                ))}
+            {users.map(({ name, rank, _id }) => (
+                <li
+                    key={_id}
+                    draggable={true}
+                    className={s.item}
+                    onDragStart={e => handleDragStart(e, rank)}
+                    onDragEnter={e => handleDragEnter(e, rank)}
+                    onDragEnd={handleDragEnd}
+                >
+                    {editId === _id ? (
+                        <EditForm
+                            rank={rank}
+                            name={name}
+                            cancel={cancel}
+                            submit={submit}
+                        />
+                    ) : (
+                        <>
+                            <div className={s.user}>
+                                <span>{rank}: </span>
+                                <span>{name}</span>
+                            </div>
+                            <div className={s.buttons}>
+                                <RiEditLine
+                                    className={s.button}
+                                    size="25"
+                                    onClick={() => onEdit(_id)}
+                                />
+                                <RiDeleteBin5Line
+                                    className={s.button}
+                                    size="25"
+                                    onClick={() => remove(_id)}
+                                />
+                            </div>
+                        </>
+                    )}
+                </li>
+            ))}
         </ul>
     );
 };
